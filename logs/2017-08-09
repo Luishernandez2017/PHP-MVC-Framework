@@ -1,0 +1,8 @@
+[09-Aug-2017 13:38:54 Europe/Paris] Uncaught exception: 'Exception' with message 'No route matched.'
+ Stack trace: #0 C:\wamp\www\PHP-course\Udemy PHP\PHP_FRAMEWORK\MVC\public\index.php(45): Core\Router->dispatch('products')
+#1 {main}
+ Thrown in 'C:\wamp\www\PHP-course\Udemy PHP\PHP_FRAMEWORK\MVC\Core\Router.php' on line: 153
+[09-Aug-2017 13:39:39 Europe/Paris] Uncaught exception: 'Exception' with message 'No route matched.'
+ Stack trace: #0 C:\wamp\www\PHP-course\Udemy PHP\PHP_FRAMEWORK\MVC\public\index.php(45): Core\Router->dispatch('products')
+#1 {main}
+ Thrown in 'C:\wamp\www\PHP-course\Udemy PHP\PHP_FRAMEWORK\MVC\Core\Router.php' on line: 153

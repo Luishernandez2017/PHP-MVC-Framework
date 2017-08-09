@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use \Core\View;
+use \App\Models\Post;
 /** Post Controller **/
 
     class Posts extends \Core\Controller{
@@ -31,9 +32,13 @@ use \Core\View;
         */
 
     public function indexAction(){
+        $posts = Post::getAll();
         // echo 'Hello from the index action in the Posts controller';
         // echo '<p> Query string parameters: <pre> '.htmlspecialchars(print_r($_GET, true)). '</pre></p>';
-     View::render('Posts/index.php');
+     View::render('Posts/index.php', [
+             'posts'=> $posts
+         ]);
+         
     }
 
     /**

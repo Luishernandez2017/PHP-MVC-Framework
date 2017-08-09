@@ -16,10 +16,11 @@ class View{
 
         $file = "../App/Views/$view";  //relative to Core directory
 
-        if(\is_readable($file)){
+        if(is_readable($file)){
             require($file);
         }else{
-            echo  " {$file} not found";
+             // echo  " {$file} not found";
+           throw new \Exception("$file not found");
         }
     }
 }

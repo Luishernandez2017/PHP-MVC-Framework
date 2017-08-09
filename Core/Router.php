@@ -139,13 +139,18 @@ namespace Core;
               $controller_object->$action();
 
             }else{
-              echo "Method {$action} (in controller {$controller}) not found.";
+                //echo "Method {$action} (in controller {$controller}) not found.";
+              throw new \Exception("Method $action (in controller $controller) not found");
+            
             }//end of is callable
           }else{
-            echo "Controller class {$controller} not found";
+            // echo "Controller class {$controller} not found";
+            throw new \Exception("Controller class $controller not found");
+
           }//end of class exists
         }else{
-          echo "No route matched.";
+              // echo "No route matched.";
+         throw new \Exception ("No route matched.", 404);
           
         }//end of this->match()
       }//end of dispatch()
